@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -7,13 +8,15 @@ public class App {
          * diferentes del país,
          * en cada ciudad cuenta con T tiendas y cada tienda cuenta con N empleados,
          * asimismo, cada una registra lo que vende de manera individual cada empleado,
-         * cuánto fue lo que vendió cada tienda, cuánto se vendió en cada ciudad y
+         * cuánto fue lo que vendió cada tienda,
+         * cuánto se vendió en cada ciudad y
          * cuánto recaudó la cadena en un solo día.
          * Realiza un algoritmo que permita introducir en un día,
          * lo que vendió cada empleado de cada tienda de cada ciudad y saber las ventas
          * totales por tienda, por ciudad y totales.
          */
         Scanner sc = new Scanner(System.in);
+        Random rd = new Random();
         System.out.println("En cuantas ciudades tiene tiendas?:");
         int ciudades = sc.nextInt();
         sc.nextLine();
@@ -22,6 +25,7 @@ public class App {
         sc.nextLine();
         System.out.println("Cuantos trabajadores tiene?:");
         int trabajadores = sc.nextInt();
+        int ventaTrabajador = rd.nextInt(1, 21);
 
         int ventas = 0;
         int ventasCiudades = 0;
@@ -30,9 +34,13 @@ public class App {
             for (int j = 0; j < tienda; j++) {
                 for (int j2 = 0; j2 < trabajadores; j2++) {
                     ventas = ciudades * tienda * trabajadores;
+                    ventasTiendas = trabajadores *ventaTrabajador;
+                    ventasCiudades = tienda *trabajadores * ventaTrabajador;
                 }
             }
         }
         System.out.println("La cantidad de ventas realizadas es de : " + ventas);
+        System.out.println("La ciudad recaudo: " + ventasCiudades);
+        System.out.println("Lo qu eha vendido cada tienda: " + ventasTiendas);
     }
 }
