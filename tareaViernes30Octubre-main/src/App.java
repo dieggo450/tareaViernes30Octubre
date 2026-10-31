@@ -53,6 +53,7 @@ public class App {
             // el valor de cada tienda a la variable
             // ventasTotales (acumulacion).
             ventasTotales += ventasCiudades;
+            
         }
 
         System.out.println("La cantidad de ventas realizada por tienda es de: " + ventasTiendas);
