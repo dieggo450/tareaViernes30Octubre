@@ -17,6 +17,8 @@ public class Ejercicio_Tienda {
         // Cuanto gano la empresa
         // Cuanto vende cada emppleado de forma individual
         // Cuanto vendio cada tienda
+
+        
         Scanner sc = new Scanner(System.in);
         System.out.println("Cuantas ciudades tiene?: ");
         int ciudad = sc.nextInt();
